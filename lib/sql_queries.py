@@ -1,18 +1,34 @@
+# lib/sql_queries.py
+
+# 1. Select all female bears and return their names and ages
 select_all_female_bears_return_name_and_age = """
-    Write your SQL query here
+    SELECT name, age
+    FROM bears
+    WHERE sex = 'F';
 """
 
 select_all_bears_names_and_orders_in_alphabetical_order = """
-    Write your SQL query here
+    SELECT name
+    FROM bears
+    WHERE name IS NOT NULL
+    ORDER BY name;
 """
 
-select_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest = """
-    Write your SQL query here
+
+# 3. Select the oldest bear's name and age
+select_oldest_bear_return_name_and_age = """
+    SELECT name, age
+    FROM bears
+    ORDER BY age DESC
+    LIMIT 1;
 """
 
-select_oldest_bear_and_returns_name_and_age = """
-    Write your SQL query here
+# 4. Select the youngest bear's name and age
+select_youngest_bear_return_name_and_age = """
+    SELECT name, age
+    FROM bears
+    ORDER BY age ASC
+    LIMIT 1;
 """
-select_youngest_bear_and_returns_name_and_age = """
-    Write your SQL query here
-"""
+
+# Add more queries here if needed for your specific tests
